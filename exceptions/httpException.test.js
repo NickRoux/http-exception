@@ -44,8 +44,4 @@ test('HttpException message argument not provided', () => {
     data: 'some data',
   });
   expect(error.status).toBe(404);
-  expect(error.message).toBe(null);
-  expect.objectContaining({
-    data: 'some data',
-  });
 });

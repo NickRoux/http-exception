@@ -69,7 +69,6 @@ test('exceptions.UnauthenticatedException with message and data', () => {
   });
 });
 
-
 test('exceptions.UnauthorizedException', () => {
   const error = new exceptions.UnauthorizedException();
   expect(error.status).toBe(403);
@@ -91,4 +90,23 @@ test('exceptions.UnauthorizedException with message and data', () => {
   expect.objectContaining({
     id: 1
   });
+});
+
+test('exceptions.BadRequestException', () => {
+  const error = new exceptions.BadRequestException();
+  expect(error.status).toBe(400);
+  expect(error.message).toBe('Bad Request')
+});
+
+test('exceptions.BadRequestException with message', () => {
+  const error = new exceptions.BadRequestException('data malformed');
+  expect(error.status).toBe(400);
+  expect(error.message).toBe('data malformed')
+});
+
+test('exceptions.BadRequestException with message and data', () => {
+  const error = new exceptions.BadRequestException('data malformed', ['id is not a number', 'name is required']);
+  expect(error.status).toBe(400);
+  expect(error.message).toBe('data malformed');
+  expect.objectContaining(['id is not a number', 'name is required']);
 });
