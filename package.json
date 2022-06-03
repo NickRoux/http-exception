@@ -1,0 +1,28 @@
+{
+  "name": "@theflyinghorse/http-exception",
+  "version": "1.0.0",
+  "description": "common http error types",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickRoux/http-exception.git"
+  },
+  "keywords": [
+    "node",
+    "expressjs",
+    "exception",
+    "error"
+  ],
+  "author": "nick ross",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/NickRoux/http-exception/issues"
+  },
+  "homepage": "https://github.com/NickRoux/http-exception#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}
